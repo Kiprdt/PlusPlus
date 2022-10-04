@@ -1,3 +1,11 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <iostream>
 
 using namespace std;
@@ -15,13 +23,15 @@ int main()
         cout << mas[i] << " ";
     cout << endl;
     int s = 0, k = 0, p = 1;
+    int max = mas[0], min = mas[0];
     for (int i = 0; i < n; i++)
         {
-            if (mas[i] > 0) k++;
-            if (mas[i] < 0) p *= mas[i];
-            if (mas[i]%2 == 0) s += mas[i];
+            if (mas[i] > max) max = mas[i];
+            if (mas[i] < min) min = mas[i];
         }
         cout << "S=" << s << endl;
         cout << "P" << p << endl;
         cout << "K=" << k << endl;
+        cout << "max" << max << endl;
+        cout << "min" << min << endl;
 }
